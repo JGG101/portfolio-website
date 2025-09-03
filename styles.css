@@ -1,0 +1,268 @@
+:root {
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --accent: #0b74de;
+    --muted: #6b7280;
+    --radius: 12px;
+    --max-width: 1100px;
+    --container-padding: 1rem;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    line-height: 1.45;
+    color: #0f172a;
+    background: var(--bg)
+}
+
+/* Layout */
+.site {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .5rem 0
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    text-decoration: none;
+    color: inherit
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent), #06b6d4);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 700
+}
+
+/* Nav */
+nav {
+    display: flex;
+    gap: .5rem;
+    align-items: center
+}
+
+nav a {
+    padding: .45rem .6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: .95rem
+}
+
+nav a.primary {
+    background: var(--card);
+    box-shadow: 0 6px 18px rgba(11, 116, 222, 0.06);
+    color: var(--accent)
+}
+
+/* Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.25rem 0
+}
+
+.hero__intro h1 {
+    font-size: 1.6rem;
+    margin: 0
+}
+
+.hero__intro p {
+    color: var(--muted);
+    margin: .4rem 0 1rem
+}
+
+.cta-group {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .6rem .9rem;
+    border-radius: 10px;
+    border: 0;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-weight: 700
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid rgba(11, 116, 222, 0.12)
+}
+
+/* Grid for projects */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem
+}
+
+.card {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(12, 18, 28, 0.04);
+}
+
+.project-thumb {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #eef2ff
+}
+
+.tags {
+    display: flex;
+    gap: .4rem;
+    flex-wrap: wrap;
+    margin-top: .6rem
+}
+
+.tag {
+    padding: .25rem .5rem;
+    border-radius: 999px;
+    background: #eef2ff;
+    font-size: .8rem;
+    color: var(--accent)
+}
+
+/* Two-column layout for larger screens */
+@media (min-width:720px) {
+    .hero {
+        grid-template-columns: 1fr 360px
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (min-width:1024px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+/* Resume / contact / footer */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem
+}
+
+@media (min-width:900px) {
+    .two-col {
+        grid-template-columns: 2fr 1fr
+    }
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--muted);
+    font-size: .9rem
+}
+
+/* Utility classes */
+.muted {
+    color: var(--muted)
+}
+
+a.icon {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem
+}
+
+/* Project detail modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(2, 6, 23, 0.5)
+}
+
+.modal.open {
+    display: flex
+}
+
+.modal .panel {
+    max-width: 920px;
+    width: 100%;
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 12px
+}
+
+/* Form */
+form input,
+form textarea {
+    width: 100%;
+    padding: .6rem .75rem;
+    border-radius: 10px;
+    border: 1px solid #e6eef8;
+    margin-top: .5rem
+}
+
+form label {
+    font-weight: 700
+}
+
+form .actions {
+    display: flex;
+    gap: .5rem;
+    margin-top: .75rem
+}
+
+/* small screens footer nav */
+.mobile-nav {
+    display: flex;
+    gap: .4rem;
+    overflow: auto
+}
+
+/* Accessibility focus */
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid rgba(11, 116, 222, 0.18);
+    outline-offset: 2px
+}

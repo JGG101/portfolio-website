@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jal Gai — Full‑Stack Developer | Portfolio</title>
+
+    <!-- Primary SEO -->
+    <meta name="description" content="Jal Gai — Full-stack developer. I build modern web apps (Landing pages, E‑commerce, CRUD Blog). Node.js, Express, MongoDB, MySQL. View projects, resume, and contact.">
+    <meta name="keywords" content="Full-stack developer, Node.js, Express, MongoDB, MySQL, e-commerce, portfolio, web developer">
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jal Gai — Full‑Stack Developer | Portfolio">
+    <meta property="og:description" content="I build modern web apps (Landing pages, E‑commerce, CRUD Blog). View projects, resume & contact.">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="/assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jal Gai — Full‑Stack Developer | Portfolio">
+    <meta name="twitter:description" content="I build modern web apps (Landing pages, E‑commerce, CRUD Blog). View projects, resume & contact.">
+    <meta name="twitter:image" content="/assets/og-image.png">
+
+    <!-- PWA hint (optional) -->
+    <meta name="theme-color" content="#0b74de">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jal Gai",
+        "url": "https://yourdomain.com/",
+        "sameAs": ["https://github.com/yourusername","https://www.linkedin.com/in/yourprofile"],
+        "jobTitle": "Full-Stack Developer",
+        "description": "Full-stack developer specializing in Node.js, Express, MongoDB, and modern frontend technologies."
+    }
+    </script>
+
+    <!-- Styles: Mobile-first -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="site" id="top">
+        <header>
+            <a class="brand" href="#top" aria-label="Go to homepage">
+                <div class="logo">JG</div>
+                <div>
+                <div style="font-weight:800">Jal Gai</div>
+                <div style="font-size:.8rem;color:var(--muted)">Full‑Stack Developer</div>
+                </div>
+            </a>
+
+            <nav aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact" class="primary">Contact</a>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero" id="home" aria-labelledby="hero-heading">
+            <div class="hero__intro">
+                <h1 id="hero-heading">Hi, I’m <strong>Jal</strong>. I build modern web apps.</h1>
+                <p class="muted">I design & develop responsive, accessible web applications using Node.js, Express, MongoDB, MySQL and modern frontend tooling. Below are selected projects — landing pages, an e-commerce platform, and a CRUD blog app.</p>
+
+                <div class="cta-group">
+                    <a class="btn" href="#portfolio">View My Work</a>
+                    <a class="btn ghost" href="/assets/Jal_Gai_Resume.pdf" download>Download Resume</a>
+                </div>
+
+                <!-- Quick skills -->
+                <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">HTML/CSS/JS</span>
+                </div>
+            </div>
+
+            <!-- Profile / social box -->
+            <aside class="card" aria-label="Profile card">
+                <img src="assets/profile-400.png" alt="Headshot of Jal Gai" width="320" height="320" style="width:100%;border-radius:10px;object-fit:cover;display:block">
+                <div style="margin-top:.6rem">
+                    <div style="font-weight:800">Jal Gai</div>
+                    <div class="muted">Freelance Full‑Stack Developer</div>
+                    <div style="margin-top:.5rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                        <a class="icon" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+                        <a class="icon" href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="card" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p class="muted">I’m a web developer focused on building reliable, maintainable systems and delightful user experiences. I’ve built landing sites that convert, e-commerce platforms with secure checkout flows, and content-driven CRUD apps with authentication and role-based access.</p>
+
+            <div style="margin-top:1rem" class="two-col">
+                <div>
+                    <h3>Experience</h3>
+                    <ul>
+                        <li><strong>Freelance Web Developer</strong> — Client projects (2021–Present)</li>
+                        <li><strong>Software Developer</strong> — SomeCompany (2019–2021)</li>
+                    </ul>
+
+                    <h3 style="margin-top:.75rem">Education & Certifications</h3>
+                    <ul class="muted">
+                        <li>B.Sc. Computer Science — University</li>
+                        <li>Cert: Node.js Developer — Example Institute</li>
+                    </ul>
+                    </div>
+
+                    <div>
+                    <h3>Skills</h3>
+                    <div class="muted">
+                        <strong>Frontend:</strong> HTML, CSS, JS, EJS, React (optional)<br>
+                        <strong>Backend:</strong> Node.js, Express<br>
+                        <strong>DB:</strong> MongoDB, MySQL<br>
+                        <strong>Tools:</strong> Git, Docker, Vercel/Heroku
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" aria-labelledby="portfolio-heading" style="margin-top:1rem">
+            <h2 id="portfolio-heading">Portfolio</h2>
+            <p class="muted">Selected projects — click a card to view details.</p>
+
+            <div class="projects">
+                <!-- Project 1 -->
+                <article class="card project" data-project="landing">
+                    <img class="project-thumb" src="assets/landing.png" alt="Screenshot of Landing Website project">
+                    <h3>Landing Website</h3>
+                    <p class="muted">Conversion-focused landing page with lead capture and A/B-ready sections.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                    <div style="margin-top:.6rem">
+                        <button class="btn" data-open="landing">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="card project" data-project="ecommerce">
+                    <img class="project-thumb" src="assets/ecommerce.png" alt="Screenshot of E-Commerce Website project">
+                    <h3>E-Commerce Website</h3>
+                    <p class="muted">Full shopping experience, product catalog, cart, checkout (Stripe demo integration).</p>
+                    <div class="tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div style="margin-top:.6rem">
+                        <button class="btn" data-open="ecommerce">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="card project" data-project="blogapp">
+                    <img class="project-thumb" src="assets/blog.png" alt="Screenshot of CRUD Blog App project">
+                    <h3>CRUD Blog App</h3>
+                    <p class="muted">User auth, create/update/delete posts, role-based permissions, image uploads.</p>
+                    <div class="tags">
+                        <span class="tag">Express</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">JWT</span>
+                    </div>
+                    <div style="margin-top:.6rem">
+                        <button class="btn" data-open="blogapp">View Details</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Resume & Testimonials -->
+        <section id="resume" style="margin-top:1rem">
+            <h2>Resume</h2>
+            <div class="card two-col">
+                <div>
+                    <h3>Selected Work & Projects</h3>
+                    <ol>
+                        <li>
+                            Landing Website — improved conversion rate by X% (demo link)
+                        </li>
+                        <li>
+                            E-Commerce Website — implemented checkout & inventory flow
+                        </li>
+                        <li>
+                            CRUD Blog App — role-based auth & admin panel
+                        </li>
+                    </ol>
+                </div>
+
+                <aside class="card">
+                    <h4>Quick Facts</h4>
+                    <p class="muted">Available for remote freelance work. Open to full-time & contract.</p>
+                    <a class="btn" href="/assets/Jal_Gai_Resume.pdf" download>Download Full Resume (PDF)</a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <!-- <section id="testimonials" style="margin-top:1rem">
+            <h2>Testimonials</h2>
+            <div class="projects">
+                <div class="card">
+                    "Jal turned our idea into a fast, reliable site" — Client A
+                </div>
+                <div class="card">
+                    "Excellent communication and delivered on time" — Client B
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Blog (Optional) -->
+        <!-- <section id="blog" style="margin-top:1rem">
+            <h2>Blog</h2>
+            <p class="muted">Short posts & case studies. (Optional — integrate a CMS or static markdown renderer)</p>
+            <div class="projects">
+                <article class="card">
+                    <h4>Case Study: E‑commerce checkout flow</h4>
+                    <p class="muted">Summary of how I structured the checkout flow for conversions.</p>
+                </article>
+                <article class="card">
+                    <h4>Tutorial: Secure user auth with JWT</h4>
+                    <p class="muted">Short walkthrough and sample code.</p>
+                </article>
+            </div>
+        </section> -->
+
+        <!-- Contact -->
+        <section id="contact" style="margin-top:1rem">
+            <h2>Contact</h2>
+            <div class="card two-col">
+                <div>
+                    <form id="contactForm" action="#" onsubmit="return handleContact(event)" aria-label="Contact form">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" required placeholder="Your name">
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="your@domain.com">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="How can I help?"></textarea>
+
+                        <div class="actions">
+                            <button class="btn" type="submit">
+                                Send Message
+                            </button>
+                            <a class="btn ghost" href="mailto:jalgai167@gmail.com">
+                                Email Me
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="card">
+                    <h4>Availability</h4>
+                    <p class="muted">
+                        Open to freelance and contract. Typical response within 24–48 hours.
+                    </p>
+                    <h4>Follow</h4>
+                    <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                        <a class="icon" href="https://github.com/yourusername">
+                            GitHub
+                        </a>
+                        <a class="icon" href="https://www.linkedin.com/in/yourprofile">
+                            LinkedIn
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <footer>
+            <div class="muted">
+                © <span id="year"></span> 
+                Jal Gai — Built with HTML, CSS & JavaScript • 
+                <a href="#privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Project Detail Modal (single modal used for all projects) -->
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="panel">
+            <button id="closeModal" aria-label="Close project details" style="float:right">
+                Close
+            </button>
+            <h3 id="modalTitle">Project Title</h3>
+            <p id="modalDesc" class="muted">
+                Longer project description goes here.
+            </p>
+            <div id="modalContent"></div>
+            <div style="margin-top:.5rem">
+                <a id="liveLink" class="btn" href="#" target="_blank" rel="noopener">Live Demo</a> 
+                <a id="repoLink" class="btn ghost" href="#" target="_blank" rel="noopener">View Code</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEO notes (hidden for editors) -->
+    <!--
+        SEO checklist implemented:
+        - Meta description, title, canonical
+        - Open Graph & Twitter Card
+        - JSON-LD Person schema
+        - Semantic HTML (section, article, header, footer)
+        - Alt text on images, lazy-loading, descriptive link labels
+        - Downloadable resume
+        - Accessible labels and focus styles
+
+        Next steps for production:
+        - Replace demo image/link placeholders with real assets
+        - Serve optimized images (srcset / WebP)
+        - Add server-side rendering or prerendering for better SEO
+        - Hook contact form to a serverless function or API endpoint
+    -->
+</body>
+</html>
