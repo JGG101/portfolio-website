@@ -29,12 +29,21 @@ body {
     padding: 1.25rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: .5rem 0
+    padding: .5rem 0;
+}
+
+header nav {
+    display: none;
 }
 
 .brand {
@@ -42,7 +51,8 @@ header {
     align-items: center;
     gap: .75rem;
     text-decoration: none;
-    color: inherit
+    color: inherit;
+    cursor: pointer;
 }
 
 .logo {
@@ -53,7 +63,8 @@ header {
     display: grid;
     place-items: center;
     color: white;
-    font-weight: 700
+    font-weight: 700;
+    cursor: pointer;
 }
 
 /* Nav */
@@ -69,7 +80,8 @@ nav a {
     text-decoration: none;
     color: var(--muted);
     font-weight: 600;
-    font-size: .95rem
+    font-size: .95rem;
+    cursor: pointer;
 }
 
 nav a.primary {
@@ -77,6 +89,97 @@ nav a.primary {
     box-shadow: 0 6px 18px rgba(11, 116, 222, 0.06);
     color: var(--accent)
 }
+
+/* Mobile-Menu */
+.mobile-menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: none;
+  cursor: pointer;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: transparent;
+  padding: 0;
+}
+
+.mobile-menu-btn span {
+  width: 2.25rem;
+  height: 0.2rem;
+  background-color: var(--accent);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  height: calc(100vh - 5rem);
+  width: 70%;
+  background-color: var(--bg);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu nav {
+  height: 20rem;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.mobile-menu nav a,
+.mobile-menu nav button {
+  font-size: 1.75rem;
+  color: var(--muted);
+}
+
+
+@media (min-width: 48rem) {
+  main {
+    margin-top: 0;
+  }
+
+  header {
+    position: static;
+  }
+
+  header nav {
+    display: block;
+  }
+
+  nav button {
+    color: var(--accent);
+    border-color: var(--muted);
+  }
+  
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+  }
+
+  nav a:hover,
+  nav a:active {
+    background-color: var(--accent);
+    color: var(--bg);
+  }
+}
+
 
 /* Hero */
 .hero {
@@ -120,6 +223,11 @@ nav a.primary {
     background: transparent;
     color: var(--accent);
     border: 1px solid rgba(11, 116, 222, 0.12)
+}
+
+.btn:hover, .btn:active {
+    background-color: var(--accent);
+    color: var(--bg);
 }
 
 /* Grid for projects */
