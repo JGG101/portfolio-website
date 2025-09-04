@@ -46,24 +46,25 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="site" id="top">
-        <header>
-            <a class="brand" href="#top" aria-label="Go to homepage">
-                <div class="logo">JG</div>
-                <div>
-                <div style="font-weight:800">Jal Gabriel</div>
-                <div style="font-size:.8rem;color:var(--muted)">Full‑Stack Developer</div>
-                </div>
-            </a>
+    
+    <header class="site" id="top">
+        <a class="brand" href="#top" aria-label="Go to homepage">
+            <div class="logo">JG</div>
+            <div>
+            <div style="font-weight:800">Jal Gabriel</div>
+            <div style="font-size:.8rem;color:var(--muted)">Full‑Stack Developer</div>
+            </div>
+        </a>
 
-            <nav aria-label="Primary navigation">
-                <a href="#about">About</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#resume">Resume</a>
-                <a href="#contact" class="primary">Contact</a>
-            </nav>
-        </header>
+        <nav aria-label="Primary navigation">
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact" class="primary">Contact</a>
+        </nav>
+    </header>
 
+    <main class="site" id="top">
         <!-- HERO -->
         <section class="hero" id="home" aria-labelledby="hero-heading">
             <div class="hero__intro">
@@ -283,15 +284,19 @@
                 </aside>
             </div>
         </section>
+    </main>
 
-        <footer>
-            <div class="muted">
-                © <span id="year"></span> 
-                Jal Gai — Built with HTML, CSS & JavaScript • 
-                <a href="#privacy">Privacy</a>
-            </div>
-        </footer>
-    </div>
+    <footer class="site" id="top">
+        <div class="muted">
+            © <span id="year"></span> 
+            Jal Gai — Built with HTML, CSS & JavaScript • 
+            <a href="#privacy">Privacy</a>
+        </div>
+    </footer>
+    
+
+
+
 
     <!-- Project Detail Modal (single modal used for all projects) -->
     <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
