@@ -1,15 +1,17 @@
 :root {
     --bg: #f6f8fa;
     --card: #ffffff;
+    --red: #ff0000;
     --accent: #0b74de;
+    --light-accent: #71b2f4;
     --muted: #6b7280;
-    --radius: 12px;
+    --radius: 10px;
     --max-width: 1100px;
     --container-padding: 1rem;
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html,
@@ -19,7 +21,7 @@ body {
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     line-height: 1.45;
     color: #0f172a;
-    background: var(--bg)
+    background: var(--bg);
 }
 
 /* Layout */
@@ -71,7 +73,7 @@ header nav {
 nav {
     display: flex;
     gap: .5rem;
-    align-items: center
+    align-items: center;
 }
 
 nav a {
@@ -195,12 +197,12 @@ nav a:active {
     grid-template-columns: 1fr;
     gap: 1rem;
     align-items: center;
-    padding: 1.25rem 0
+    padding: 1.25rem 0;
 }
 
 .hero__intro h1 {
     font-size: 1.6rem;
-    margin: 0
+    margin: 0;
 }
 
 .hero__intro p {
@@ -217,14 +219,13 @@ nav a:active {
 } */
 
 .icon:hover {
-    /* background-color: var(--bg); */
     color: var(--accent);
 }
 
 .cta-group {
     display: flex;
     gap: .5rem;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -234,16 +235,17 @@ nav a:active {
     padding: .6rem .9rem;
     border-radius: 10px;
     border: 0;
-    background: var(--accent);
-    color: white;
+    background: var(--light-accent);
+    color: var(--card);
     text-decoration: none;
-    font-weight: 700
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .btn.ghost {
     background: transparent;
     color: var(--accent);
-    border: 1px solid rgba(11, 116, 222, 0.12)
+    border: 1px solid rgba(11, 116, 222, 0.12);
 }
 
 .btn:hover, .btn:active {
@@ -256,7 +258,7 @@ nav a:active {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 .card {
@@ -264,21 +266,23 @@ nav a:active {
     padding: 1rem;
     border-radius: var(--radius);
     box-shadow: 0 8px 24px rgba(12, 18, 28, 0.04);
+    text-align: justify;
 }
 
 .project-thumb {
     width: 100%;
     height: 160px;
-    border-radius: 10px;
+    border-radius: var(--radius);
     object-fit: cover;
-    background: #eef2ff
+    background: var(--bg);
+    overflow: hidden;
 }
 
 .tags {
     display: flex;
     gap: .4rem;
     flex-wrap: wrap;
-    margin-top: .6rem
+    margin-top: .6rem;
 }
 
 .tag {
@@ -286,23 +290,23 @@ nav a:active {
     border-radius: 999px;
     background: #eef2ff;
     font-size: .8rem;
-    color: var(--accent)
+    color: var(--accent);
 }
 
 /* Two-column layout for larger screens */
 @media (min-width:720px) {
     .hero {
-        grid-template-columns: 1fr 360px
+        grid-template-columns: 1fr 360px;
     }
 
     .projects {
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width:1024px) {
     .projects {
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -315,7 +319,7 @@ nav a:active {
 
 @media (min-width:900px) {
     .two-col {
-        grid-template-columns: 2fr 1fr
+        grid-template-columns: 2fr 1fr;
     }
 }
 
@@ -324,12 +328,12 @@ footer {
     text-align: center;
     padding: 1rem 0;
     color: var(--muted);
-    font-size: .9rem
+    font-size: .9rem;
 }
 
 /* Utility classes */
 .muted {
-    color: var(--muted)
+    color: var(--muted);
 }
 
 a.icon {
@@ -346,11 +350,11 @@ a.icon {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background: rgba(2, 6, 23, 0.5)
+    background: rgba(2, 6, 23, 0.5);
 }
 
 .modal.open {
-    display: flex
+    display: flex;
 }
 
 .modal .panel {
@@ -358,7 +362,20 @@ a.icon {
     width: 100%;
     background: var(--card);
     padding: 1rem;
-    border-radius: 12px
+    border-radius: var(--radius);
+}
+
+#closeModal {
+    background-color: var(--red);
+    color: var(--card);
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+}
+
+#closeModal:hover {
+    background-color: var(--card);
+    color: var(--red);
 }
 
 /* Form */
@@ -368,24 +385,24 @@ form textarea {
     padding: .6rem .75rem;
     border-radius: 10px;
     border: 1px solid #e6eef8;
-    margin-top: .5rem
+    margin-top: .5rem;
 }
 
 form label {
-    font-weight: 700
+    font-weight: 700;
 }
 
 form .actions {
     display: flex;
     gap: .5rem;
-    margin-top: .75rem
+    margin-top: .75rem;
 }
 
 /* small screens footer nav */
 .mobile-nav {
     display: flex;
     gap: .4rem;
-    overflow: auto
+    overflow: auto;
 }
 
 /* Accessibility focus */
@@ -393,5 +410,5 @@ a:focus,
 button:focus,
 input:focus {
     outline: 3px solid rgba(11, 116, 222, 0.18);
-    outline-offset: 2px
+    outline-offset: 2px;
 }
