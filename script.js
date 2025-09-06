@@ -132,3 +132,32 @@ modal.addEventListener('keydown', e => {
 
 // Simple UTM safe link enhancement (preserve privacy)
 document.querySelectorAll('a[target="_blank"]').forEach(a => a.rel='noopener noreferrer');
+
+
+// Thank You Text
+const form = document.getElementById("contact-form");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        // Redirect to your own page
+        window.location.href = "https://jalgabriel.github.io/portfolio-website/thank-you.html";
+      } else {
+        // Optional: show inline error
+        alert("Sorry, something went wrong. Please try again later.");
+      }
+    } catch (err) {
+      alert("Network error. Please check your connection and try again.");
+    }
+  });
+}

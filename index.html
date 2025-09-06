@@ -28,15 +28,15 @@
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jal Gabriel",
-        "url": "https://jgg101.github.io/portfolio-website/",
-        "sameAs": ["https://github.com/jgg101","https://www.linkedin.com/in/jalgabriel"],
-        "jobTitle": "Full-Stack Developer",
-        "description": "Full-stack developer specializing in Node.js, Express, MongoDB, and modern frontend technologies."
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Jal Gabriel",
+            "url": "https://jgg101.github.io/portfolio-website/",
+            "sameAs": ["https://github.com/jgg101","https://www.linkedin.com/in/jalgabriel"],
+            "jobTitle": "Full-Stack Developer",
+            "description": "Full-stack developer specializing in Node.js, Express, MongoDB, and modern frontend technologies."
+        }
     </script>
 
     <!-- Styles: Mobile-first -->
@@ -258,9 +258,9 @@
 
         <!-- Contact -->
         <section id="contact" style="margin-top:1rem">
-            <h2>Contact</h2>
+            <!-- <h2>Contact</h2> -->
             <div class="card two-col">
-                <div>
+                <!-- <div>
                     <form id="contactForm" action="#" onsubmit="return handleContact(event)" aria-label="Contact form">
                         <label for="name">Name</label>
                         <input id="name" name="name" required placeholder="Your name">
@@ -279,6 +279,36 @@
                                 Email Me
                             </a>
                         </div>
+                    </form>
+                </div> -->
+
+                <!-- Contact Section -->
+                <div id="contact">
+                    <h2>Contact Me</h2>
+                    <form action="https://formspree.io/f/xeolvjyb" method="POST" id="contact-form">
+                        <!-- Name -->
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter yore name here" required>
+
+                        <!-- Email -->
+                        <label for="email">Your Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+                        <!-- Message -->
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+                        <!-- Hidden field for subject -->
+                        <!-- <input type="hidden" name="_subject" value="New Portfolio Contact Request"> -->
+
+                        <!-- Simple honeypot -->
+                        <input type="text" name="_gotcha" style="display: none;" id="">
+
+                        <!-- Submit -->
+                        <button type="submit">Send Message</button>
+
+                        <!-- Thank You text to sender -->
+                        <!-- <input type="hidden" name="_next" value="https://jalgabriel.github.io/portfolio-website/thankU.html"> -->
                     </form>
                 </div>
 
