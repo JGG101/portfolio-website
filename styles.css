@@ -137,6 +137,13 @@ nav a.primary {
   color: var(--muted);
 }
 
+nav a:hover,
+nav a:active {
+    color: var(--accent);
+    /* background-color: var(--accent); */
+    /* color: var(--bg); */
+}
+
 
 @media (min-width: 48rem) {
   main {
@@ -175,8 +182,9 @@ nav a.primary {
 
   nav a:hover,
   nav a:active {
-    background-color: var(--accent);
-    color: var(--bg);
+    color: var(--accent);
+    /* background-color: var(--accent); */
+    /* color: var(--bg); */
   }
 }
 
@@ -197,7 +205,20 @@ nav a.primary {
 
 .hero__intro p {
     color: var(--muted);
-    margin: .4rem 0 1rem
+    margin: .4rem 0 1rem;
+    text-align: justify;
+}
+
+/* .icon {
+    background-color: var(--accent);
+    color: var(--bg);
+    border-radius: var(--radius);
+    padding: .2em;
+} */
+
+.icon:hover {
+    /* background-color: var(--bg); */
+    color: var(--accent);
 }
 
 .cta-group {
