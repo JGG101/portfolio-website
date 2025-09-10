@@ -20,14 +20,6 @@ const PROJECTS = {
     }
 };
 
-// Modal logic
-const modal = document.getElementById('projectModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalDesc = document.getElementById('modalDesc');
-const modalContent = document.getElementById('modalContent');
-const liveLink = document.getElementById('liveLink');
-const repoLink = document.getElementById('repoLink');
-
 // Mobile Menu Toggle
 const mobileMenuBtnElement = document.getElementById('mobile-menu-btn');
 const mobileMenuElement = document.getElementById('mobile-menu');
@@ -38,6 +30,13 @@ function toggleMobileMenu() {
 
 mobileMenuBtnElement.addEventListener('click', toggleMobileMenu);
 
+// Modal logic
+const modal = document.getElementById('projectModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalContent = document.getElementById('modalContent');
+const liveLink = document.getElementById('liveLink');
+const repoLink = document.getElementById('repoLink');
 
 document.querySelectorAll('[data-open]').forEach(btn => {
     btn.addEventListener('click', e => {

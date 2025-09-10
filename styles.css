@@ -127,7 +127,18 @@ nav a.primary {
   display: flex;
 }
 
-.mobile-menu nav {
+.mobile-menu {
+  height: 100%;
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.mobile-menu a {
+  font-size: 1.75rem;
+  color: var(--muted);
+}
+
+/* .mobile-menu nav {
   height: 20rem;
   width: 90%;
   margin: 1rem auto;
@@ -137,7 +148,7 @@ nav a.primary {
 .mobile-menu nav button {
   font-size: 1.75rem;
   color: var(--muted);
-}
+} */
 
 nav a:hover,
 nav a:active {
